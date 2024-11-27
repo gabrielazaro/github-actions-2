@@ -11,5 +11,9 @@ jobs:
   prettier:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello, world!"
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
 
+      - run: echo "Hello, world!"
